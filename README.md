@@ -15,7 +15,7 @@ $ docker run -d --rm \
   --device ${device} \
   --name ${name} \
   -p 8090:8090 \          # the host also gains access to the stream
-  waggle/plugin-media-streaming:${version} \
+  waggle/media-streamer:${version} \
   -f v4l2 \
   -input_format mjpeg \
   -video_size 640*480 \
@@ -51,7 +51,7 @@ docker run -d \
   --network waggle \   # if the streamer runs on a different network
   -v {storage}:/storage \
   --entrypoint /app/sample.sh \
-  waggle/plugin-media-streaming:0.2.0 \
+  waggle/media-streamer:0.1.0 \
   -verbose \
   -stream http://${name}:8090/live \
   -period 0 \     # if 0 it samples an image, otherwise a video/audio clip
