@@ -4,6 +4,7 @@ RUN apt-get update \
   && apt-get install -y \
   ffmpeg \
   curl \
+  inotify-tools \
   && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
