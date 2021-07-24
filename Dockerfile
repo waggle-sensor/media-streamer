@@ -5,6 +5,7 @@ RUN apt-get update \
   ffmpeg \
   curl \
   inotify-tools \
+  rsync \
   && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
